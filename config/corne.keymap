@@ -35,7 +35,7 @@
    &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp DEL
    &kp LCTRL  &none        &none     &none &none     &none &kp LEFT &kp DOWN &kp UP &kp RIGHT &none  &none
    &kp LSHFT  &none &none &none &none &none &none   &none   &none &none    &none &none
-                           &kp LALT     &mo 2        &kp SPACE    &none  &trans   &none
+                           &kp LALT     &mo 3        &kp SPACE    &none  &trans   &none
                         >;
                 };
 
@@ -46,11 +46,25 @@
 // | GUI+C |  ^  |  /  |  *  |  \  |  |  |   |  ~  |  "  |  [  |  ]  |  @  |      |
 //                    | ALT | ESC | SPC |   |ENT| _ | GUI |
                         bindings = <
-  &kp LC(GRAVE) &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET &kp AMPS  &kp LPAR  &kp RPAR  &kp GRAVE &kp BSPC
+ &kp LC(GRAVE) &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET &kp AMPS  &kp LPAR  &kp RPAR  &kp GRAVE &kp BSPC
    &kp LG(V)     &kp SQT   &kp MINUS &kp PLUS  &kp EQUAL &kp HASH     &kp UNDER &kp COLON &kp LBRC  &kp RBRC  &kp QMARK &kp RSHFT
    &kp LG(C)     &kp CARET &kp FSLH  &kp ASTRK &kp BSLH  &kp PIPE     &kp TILDE &kp DQT   &kp LBKT  &kp RBKT  &kp AT    &none
                            &kp LALT  &kp ESC   &kp SPACE    &kp RET &kp UNDER &kp LGUI
                         >;
                 };
+            function_layer {
+// -----------------------------------------------------------------------------------------
+// | BOOT | F1  | F2  |     |     | F5  |   |     |     |     | F11 | F12 | PSCRN |
+// | RGB_TOG | RGB_HUI | RGB_SAI | RGB_BRI |     |     |   | MUTE | VOL_DN | VOL_UP | PLAY |     |     |
+// | RGB_EFF | RGB_HUD | RGB_SAD | RGB_BRD |     |     |   |     |     |     |     |     |     |
+//                    |     |     |     |   |     |     |     |
+                        bindings = <
+   &bootloader &kp F1       &kp F2       &none        &none        &kp F5          &none      &none      &none      &kp F11     &kp F12     &kp PSCRN
+   &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_PP &none       &none
+   &bt     &rgb_hud     &rgb_sad     &rgb_brd     &none        &none           &none      &none      &none      &none       &none       &none
+                                          &trans       &trans       &none           &trans     &trans     &trans
+                        >;
+                };
         };
+
 };
