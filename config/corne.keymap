@@ -79,8 +79,7 @@
    &kp LSHFT &kp HY(Z) &kp HY(X) &kp HY(C) &kp HY(V) &kp HY(B)   &kp HY(N) &kp HY(M)  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
                   &kp RALT  &mo 2 &kp SPACE   &kp RET &lt 1 ESC &kp LGUI
                         >;
-        }
-        
+        };
         };
 
 
